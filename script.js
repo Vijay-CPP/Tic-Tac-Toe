@@ -173,14 +173,23 @@ function winnerCheck() {
     return false;
 }
 
+let winTimes = 0;
+
 function gameOverAnimation() {
     for (let i = 0; i < 9; i++) {
         n[i].classList.add("game-over");
     }
 
-    let music = new Audio("sounds/win.wav")
-    music.play();
+
+    if (winTimes == 0) {
+        let music = new Audio("sounds/win.wav")
+        music.play();
+
+        winTimes++;
+    }
 }
+
+let drawTimes = 0;
 
 
 function drawAnimation() {
@@ -188,8 +197,11 @@ function drawAnimation() {
         n[i].classList.add("game-over");
     }
 
-    let music = new Audio("sounds/draw.wav");
-    music.play();
+    if (drawTimes == 0) {
+        let music = new Audio("sounds/draw.wav");
+        music.play();
+        drawTimes++;
+    }
 }
 
 function drawCheck() {
