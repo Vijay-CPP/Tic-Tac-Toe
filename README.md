@@ -1,2 +1,2 @@
-# Tic-Tac-Toe-
+# Tic-Tac-Toe
 This is a simple Tic Tac Toe game made with JavaScript.
